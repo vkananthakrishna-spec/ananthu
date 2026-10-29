@@ -67,7 +67,31 @@
     box-shadow: var(--shadow); position:relative;
     transform:rotate(-3deg); transition:transform .4s ease;
   }
-  .photo-frame:hover{transform:rotate(0deg) scale(1.03);}
+  .
+.photo-frame {
+  width: 260px;
+  height: 260px;
+  border-radius: 32px;
+  overflow: hidden;
+  background: linear-gradient(160deg, var(--primary), var(--primary-dark));
+  box-shadow: var(--shadow);
+  position: relative;
+  transform: rotate(-3deg);
+  transition: transform .4s ease;
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: inherit;
+}
+
+.photo-frame:hover {
+  transform: rotate(0deg) scale(1.03);
+}
+
   .photo-frame::after{content:''; position:absolute; inset:-14px; border:2px dashed var(--border); border-radius:40px; z-index:-1;}
 
   .section-title{text-align:center; font-size:1.9rem; margin-bottom:8px;}
